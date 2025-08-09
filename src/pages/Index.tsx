@@ -13,10 +13,10 @@ import Navigation from "@/components/Navigation";
 const Index = () => {
   // --- Edit these numbers anytime (they’re shown on the homepage) ---
   const achievements = [
-    { icon: BookOpen, value: "45+", label: "Publications" },   // update from Scholar if desired
-    { icon: Users,   value: "2,340", label: "Citations" },      // "
-    { icon: Award,   value: "28",    label: "h-index" },        // "
-    { icon: Globe,   value: "15",    label: "Countries" },
+    { icon: BookOpen, value: "60+", label: "Publications" },   // update from Scholar if desired
+    { icon: Users,   value: "747", label: "Citations" },      // "
+    { icon: Award,   value: "14",    label: "h-index" },        // "
+    { icon: Globe,   value: "20",    label: "i10" },
   ];
 
   // Research areas aligned with your profile
