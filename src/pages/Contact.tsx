@@ -57,23 +57,23 @@ const Contact = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="h-5 w-5 text-primary mt-1" />
                   <div>
-                    <p className="font-medium">Department of Ecology</p>
-                    <p className="text-muted-foreground">University of California, Davis</p>
-                    <p className="text-muted-foreground">One Shields Avenue</p>
-                    <p className="text-muted-foreground">Davis, CA 95616</p>
+                    <p className="font-medium">Department of Freshwater Ecology</p>
+                    <p className="text-muted-foreground">University of South Bohemia</p>
+                    <p className="text-muted-foreground">Zátiší 728/II</p>
+                    <p className="text-muted-foreground">Vodnany (Czechia) </p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="font-medium">isoto@ucdavis.edu</p>
+                    <p className="font-medium">isma-sa@hotmail.com</p>
                     <p className="text-sm text-muted-foreground">Primary email</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-primary" />
                   <div>
-                    <p className="font-medium">(530) 752-1234</p>
+                    <p className="font-medium">(34) 638100205</p>
                     <p className="text-sm text-muted-foreground">Office phone</p>
                   </div>
                 </div>
@@ -88,15 +88,15 @@ const Contact = () => {
                 <div className="space-y-2">
                   <div className="flex justify-between">
                     <span>Tuesday</span>
-                    <span className="text-muted-foreground">2:00 PM - 4:00 PM</span>
+                    <span className="text-muted-foreground">3:00 PM - 4:00 PM</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Thursday</span>
-                    <span className="text-muted-foreground">10:00 AM - 12:00 PM</span>
+                    <span className="text-muted-foreground">8:00 AM - 10:00 PM</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Friday</span>
-                    <span className="text-muted-foreground">1:00 PM - 3:00 PM</span>
+                    <span className="text-muted-foreground">1:00 PM - 2:00 PM</span>
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground mt-4">
@@ -127,7 +127,7 @@ const Contact = () => {
                   <MessageSquare className="h-5 w-5 text-primary" />
                   <span>Send a Message</span>
                 </CardTitle>
-                <CardDescription>I'll respond to your inquiry within 48 hours</CardDescription>
+                <CardDescription>I'll respond to your inquiry within 48 hours (hopefully :-D)</CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -175,14 +175,14 @@ const Contact = () => {
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
                   For media interviews, press releases, or public speaking requests, please
-                  contact the UC Davis Media Relations team:
+                  contact me via email (isma-sa@hotmail.com)
                 </p>
                 <div className="space-y-2 text-sm">
                   <p>
-                    <strong>Media Relations:</strong> media@ucdavis.edu
+                    <strong>Media Relations:</strong> isma-sa@hotmail.com
                   </p>
                   <p>
-                    <strong>Phone:</strong> (530) 752-1932
+                    <strong>Phone:</strong> (34) 638100205
                   </p>
                 </div>
               </CardContent>

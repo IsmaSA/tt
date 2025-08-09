@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Github, Twitter, Mail, GraduationCap, Link as LinkIcon } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import TopCollaborators from "@/components/TopCollaborators";
 
 const Index = () => {
   // --- Edit these numbers anytime (they’re shown on the homepage) ---
@@ -62,10 +63,7 @@ const Index = () => {
       url: "https://github.com/ismasa",
       icon: Github,
     },
-    // Add later when you have URLs:
-    { type: "ResearchGate", title: "ResearchGate", description: "Publications & Q&A.", url: "", icon: LinkIcon },
-    { type: "X (Twitter)",  title: "X / Twitter",  description: "Updates & threads.", url: "", icon: Twitter },
-    { type: "Email",        title: "Email",        description: "Get in touch.",     url: "", icon: Mail },
+
   ];
   // Curated, representative publications (examples)
   const bestPublications = [
@@ -122,6 +120,39 @@ const Index = () => {
       url: "https://orcid.org/0000-0002-7288-6336",
     },
   ];
+
+  const topCollaborators = [
+    {
+      name: "Phillip J. Haubrock",
+      role: "Invasion ecology; supervisor",
+      pubs: 20,
+      avatarUrl: "",       // e.g., haubrockImg or full https URL
+      profileUrl: "",      // e.g., Scholar/ORCID/website
+    },
+    {
+      name: "Ross N. Cuthbert",
+      role: "Risk & biosecurity",
+      pubs: 18,
+      avatarUrl: "",
+      profileUrl: "",
+    },
+    {
+      name: "Irene Martín-Forés",
+      role: "Plant invasions",
+      pubs: 12,
+      avatarUrl: "",
+      profileUrl: "",
+    },
+    // add more as needed…
+  ];
+  
+  const toInitials = (name: string) =>
+    name
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((p) => p[0]!.toUpperCase())
+      .join("");
 
   return (
     <div className="min-h-screen bg-background">
@@ -198,6 +229,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <TopCollaborators />
 
       {/* Achievements */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background">
@@ -235,7 +267,7 @@ const Index = () => {
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Selected Publications</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Representative in invasion science.
+              Top-3 best publication (IMO!)
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -285,6 +317,8 @@ const Index = () => {
               Key datasets and profiles supporting transparent, reproducible research.
             </p>
           </div>
+
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {sources.map((s, i) => (
               <Card key={i} className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 bg-gradient-card border-0 shadow-card">

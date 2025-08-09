@@ -6,68 +6,111 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Microscope, TreePine, Fish, Bug } from "lucide-react";
+import {
+  Microscope,
+  Globe,
+  Map,
+  Route,
+  Ship,
+  Landmark,
+  Database,
+  BarChart3,
+} from "lucide-react";
 import Navigation from "@/components/Navigation";
 
 /**
- * Research page detailing the various thematic areas under study and
- * summarising ongoing projects.  Each area is presented in a card
- * highlighting its icon, description and associated keywords.  A
- * second section lists current projects with their status and funding.
+ * Research: aligned with Isma's work on spatio-temporal dynamics of invasions,
+ * SDMs under climate change, pathways/vectors (incl. Ponto-Caspian),
+ * economic costs (InvaCost), and freshwater connectivity/barrier removal.
  */
 const Research = () => {
   const researchAreas = [
     {
-      icon: <TreePine className="h-8 w-8 text-primary" />,
-      title: "Plant Invasions",
+      icon: <Map className="h-8 w-8 text-primary" />,
+      title: "Spatio-temporal dynamics & hotspots",
       description:
-        "Studying the mechanisms and ecological impacts of invasive plant species on native ecosystems.",
-      keywords: ["Ecosystem dynamics", "Species interactions", "Habitat modification"],
+        "Global and regional analyses of establishment, spread velocity, shifting hotspots, and sender–recipient realm patterns using GBIF and allied sources.",
+      keywords: ["GBIF", "α-hulls", "Hotspot shifts", "Realm flows"],
     },
     {
-      icon: <Fish className="h-8 w-8 text-primary" />,
-      title: "Aquatic Invasions",
+      icon: <Globe className="h-8 w-8 text-primary" />,
+      title: "SDMs & climate risk forecasting",
       description:
-        "Research on invasive aquatic species and their effects on freshwater and marine environments.",
-      keywords: ["Marine ecology", "Freshwater systems", "Biodiversity loss"],
+        "Species distribution models with robust cross-validation to map current/future invasion risk and uncertainty.",
+      keywords: ["SDM", "Block CV", "GLM/GAM", "Climate scenarios"],
     },
     {
-      icon: <Bug className="h-8 w-8 text-primary" />,
-      title: "Insect Invasions",
+      icon: <Route className="h-8 w-8 text-primary" />,
+      title: "Pathways & vectors",
       description:
-        "Investigating the spread patterns and ecological consequences of invasive insect species.",
-      keywords: ["Population dynamics", "Agricultural impacts", "Vector ecology"],
+        "Quantifying introductions via shipping, canals, and trade networks, with emphasis on Ponto-Caspian corridors to North/Baltic seas.",
+      keywords: ["Shipping", "Canals", "Trade", "Ponto-Caspian"],
     },
     {
-      icon: <Microscope className="h-8 w-8 text-primary" />,
-      title: "Invasion Genetics",
+      icon: <BarChart3 className="h-8 w-8 text-primary" />,
+      title: "Economic costs & impact disharmony",
       description:
-        "Genetic analysis of invasion processes and adaptive evolution in introduced species.",
-      keywords: ["Population genetics", "Molecular markers", "Evolutionary ecology"],
+        "Synthesis of invasion costs across taxa/regions (InvaCost) and mismatches between biodiversity change and economic impacts.",
+      keywords: ["InvaCost", "Costs synthesis", "Impact disharmony"],
+    },
+    {
+      icon: <Landmark className="h-8 w-8 text-primary" />,
+      title: "Urban & heritage site risk",
+      description:
+        "Assessing threats to cities and World Heritage Sites via local species pools and trait–environment interactions.",
+      keywords: ["Cities", "World Heritage", "Exposure", "Risk scoring"],
+    },
+    {
+      icon: <Ship className="h-8 w-8 text-primary" />,
+      title: "Freshwater connectivity & barriers",
+      description:
+        "Effects of barrier removals and hydrological connectivity on spread dynamics in river networks.",
+      keywords: ["Barrier removal", "Spread velocity", "Rivers"],
     },
   ];
 
   const currentProjects = [
     {
-      title: "Global Patterns of Biological Invasions",
+      title: "Temporal shift of global invasion hotspots",
       description:
-        "A comprehensive analysis of invasion patterns across different biomes and their relationship with climate change.",
-      status: "Ongoing",
-      funding: "NSF Grant #2024-001",
+        "30k-species GBIF synthesis at ~0.08° to map historical hotspots (1950–2025) and identify emerging regions.",
+      status: "Analysis",
+      funding: "—",
     },
     {
-      title: "Predictive Models for Invasion Risk",
+      title: "SDMs of invasive threats to World Heritage Sites",
       description:
-        "Developing machine learning models to predict invasion success and ecosystem impacts.",
-      status: "Data Collection",
-      funding: "University Research Grant",
+        "Presence within 50-km buffers, multi-species SDMs, and aggregation of risk around UNESCO sites.",
+      status: "Modelling",
+      funding: "—",
     },
     {
-      title: "Economic Impacts of Invasive Species",
+      title: "Native range database for non-native species (~37k spp.)",
       description:
-        "Quantifying the economic costs of biological invasions across different sectors.",
-      status: "Analysis Phase",
-      funding: "EPA Collaborative Research",
+        "Standardising native ranges (focus on spiders & molluscs) to improve pathway inference and SDM transferability.",
+      status: "Data curation",
+      funding: "—",
+    },
+    {
+      title: "Spread dynamics of EU concern species in Iberia",
+      description:
+        "GBIF-based α-convex hulls and GAMs to estimate range expansion, velocity and effective range radius for 63 species.",
+      status: "Manuscript",
+      funding: "—",
+    },
+    {
+      title: "Riverine barrier removals & invasion proliferation",
+      description:
+        "Evaluating how connectivity restoration may accelerate freshwater invasions; guidance for mitigation.",
+      status: "In prep",
+      funding: "—",
+    },
+    {
+      title: "Ponto-Caspian pathways to North/Baltic seas",
+      description:
+        "Integrating pathway mapping, literature-based genetics, and tolerance experiments to forecast future waves.",
+      status: "Design",
+      funding: "Proposal",
     },
   ];
 
@@ -78,9 +121,11 @@ const Research = () => {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-foreground mb-4">Research Areas</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Exploring the complex dynamics of biological invasions and their ecological, economic, and social impacts
+            Quantifying and forecasting biological invasions through spatio-temporal analyses,
+            SDMs, pathway inference, and synthesis of economic impacts.
           </p>
         </div>
+
         {/* Research Areas */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {researchAreas.map((area, index) => (
@@ -94,9 +139,9 @@ const Research = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {area.keywords.map((keyword, idx) => (
-                    <Badge key={idx} variant="secondary">
-                      {keyword}
+                  {area.keywords.map((kw: string, i: number) => (
+                    <Badge key={i} variant="secondary">
+                      {kw}
                     </Badge>
                   ))}
                 </div>
@@ -104,18 +149,20 @@ const Research = () => {
             </Card>
           ))}
         </div>
+
         {/* Current Projects */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            Current Projects
-          </h2>
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Database className="h-6 w-6 text-primary" />
+            <h2 className="text-3xl font-bold text-foreground">Current Projects</h2>
+          </div>
           <div className="space-y-6">
             {currentProjects.map((project, index) => (
               <Card key={index}>
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <CardTitle className="text-xl">{project.title}</CardTitle>
-                    <Badge variant={project.status === "Ongoing" ? "default" : "secondary"}>
+                    <Badge variant={project.status === "Analysis" || project.status === "Modelling" || project.status === "Design" ? "secondary" : "default"}>
                       {project.status}
                     </Badge>
                   </div>
