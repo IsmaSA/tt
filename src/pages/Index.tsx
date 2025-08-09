@@ -10,6 +10,7 @@ import {
 import { Github, Twitter, Mail, GraduationCap, Link as LinkIcon } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import TopCollaborators from "@/components/TopCollaborators";
+import bgHero from "@/assets/Bg.jpeg";
 
 const Index = () => {
   // --- Edit these numbers anytime (they’re shown on the homepage) ---
@@ -158,40 +159,61 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero */}
-      <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero opacity-10" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary))_0%,transparent_50%)] opacity-20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent))_0%,transparent_50%)] opacity-20" />
-        <div className="max-w-7xl mx-auto relative">
-          <div className="text-center">
-            <Badge variant="secondary" className="mb-6 glass-effect shadow-glow">
-              🔬 Biological Invasions • SDMs • Climate change • Spatio-temporal modelling
-            </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-br from-foreground via-primary to-accent bg-clip-text text-transparent mb-8 leading-tight">
-              PhD Ismael Soto
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-              I study the spatio-temporal patterns and impacts of non-native species, integrating
-              ecological theory with data science (GLMs, GAMs, SDMs) to forecast risk and inform
-              management.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link to="/research">
-                <Button size="lg" className="group shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105">
-                  Explore Research
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-              <Link to="/sources">
-                <Button variant="outline" size="lg" className="glass-effect hover:bg-primary/10 transition-all duration-300">
-                  View Publications
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+     {/* Hero */}
+<section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+  {/* Background image */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src={bgHero}
+      alt=""
+      aria-hidden="true"
+      className="h-full w-full object-cover opacity-80"
+    />
+  </div>
+
+  {/* Green tint overlay */}
+  <div
+  className="absolute inset-0 z-10 bg-gradient-to-b
+             from-emerald-200/20 via-emerald-100/10 to-transparent
+             pointer-events-none"                      // was /60 and /40
+/>
+  {/* Existing gradient accents */}
+  <div className="absolute inset-0 z-20 bg-gradient-hero opacity-10 pointer-events-none" />
+  <div className="absolute inset-0 z-20 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary))_0%,transparent_50%)] opacity-20 pointer-events-none" />
+  <div className="absolute inset-0 z-20 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent))_0%,transparent_50%)] opacity-20 pointer-events-none" />
+
+  {/* Content */}
+  <div className="max-w-7xl mx-auto relative z-30">
+    <div className="text-center">
+      <Badge variant="secondary" className="mb-6 glass-effect shadow-glow">
+        🔬 Biological Invasions • SDMs • Climate change • Spatio-temporal modelling
+      </Badge>
+      <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-br from-foreground via-primary to-accent bg-clip-text text-transparent mb-8 leading-tight">
+        PhD Ismael Soto
+      </h1>
+      <p className="text-xl md:text-2xl text-black dark:text-black mb-12 max-w-4xl mx-auto leading-relaxed">
+  I study the spatio-temporal patterns and impacts of non-native species, integrating
+  ecological theory with data science (GLMs, GAMs, SDMs) to forecast risk and inform
+  management.
+</p>
+
+      <div className="flex flex-col sm:flex-row gap-6 justify-center">
+        <Link to="/research">
+          <Button size="lg" className="group shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105">
+            Explore Research
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </Link>
+        <Link to="/sources">
+          <Button variant="outline" size="lg" className="glass-effect hover:bg-primary/10 transition-all duration-300">
+            View Publications
+          </Button>
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 {/* Research Profiles */}
 <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background">
