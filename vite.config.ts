@@ -4,9 +4,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  base: '/tt/',              // 👈 IMPORTANT: your repo name
+  base: '/tt/',                 
   plugins: [react()],
-  resolve: {
-    alias: { '@': path.resolve(__dirname, './src') }
-  }
+  resolve: { alias: { '@': path.resolve(__dirname, './src') } }
 })
