@@ -52,7 +52,12 @@ const Titles = () => {
 
   // —— Short courses / certifications ——
   const trainings = [
-    {
+      {
+      name: "7th edition of the Species Distributions Modelling course",
+      provider: "Miguel B. Araujo & Babak Naimi",
+      year: "2023",
+    },
+     {
       name: "PH525.1x: Statistics and R",
       provider: "HarvardX (edX)",
       year: "2018",
@@ -81,21 +86,27 @@ const Titles = () => {
 
   // —— Awards ——
   const awards: Array<{ name: string; organization: string; year: string; description?: string }> = [
-    {
+       {
+      name: "Scholarship for participiation in national congress of Especies Exoticas Invasoras (EEI 2025)",
+      organization: "",
+      year: "2025",
+      description: "",
+    },
+     {
       name: "Best PhD Presentation",
-      organization: "—",
+      organization: "",
       year: "2022",
       description: "",
     },
     {
       name: "Best PhD Presentation",
-      organization: "—",
+      organization: "",
       year: "2024",
       description: "",
     },
     {
       name: "Best Student Publication",
-      organization: "—",
+      organization: "",
       year: "2024",
       description:
         "Sigmoidal curves reflect impacts and dynamics of aquatic invasive species.",

@@ -13,12 +13,12 @@ import TopCollaborators from "@/components/TopCollaborators";
 import bgHero from "@/assets/Bg.jpeg";
 
 const Index = () => {
-  // --- Edit these numbers anytime (they’re shown on the homepage) ---
+  
   const achievements = [
-    { icon: BookOpen, value: "60+", label: "Publications" },   // update from Scholar if desired
-    { icon: Users,   value: "747", label: "Citations" },      // "
-    { icon: Award,   value: "14",    label: "h-index" },        // "
-    { icon: Globe,   value: "20",    label: "i10" },
+    { icon: BookOpen, value: "60+", label: "Publications" },   
+    { icon: Users,   value: "765", label: "Citations" },      
+    { icon: Award,   value: "14",    label: "h-index" },       
+    { icon: Globe,   value: "20",    label: "i10-index" },
   ];
 
   // Research areas aligned with your profile
