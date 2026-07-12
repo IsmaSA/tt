@@ -14,11 +14,12 @@ import bgHero from "@/assets/Bg.jpeg";
 
 const Index = () => {
   
+  // Metrics from Google Scholar — updated Jul 2026
   const achievements = [
     { icon: BookOpen, value: "90+", label: "Publications" },   
-    { icon: Users,   value: ">1,100", label: "Citations" },      
-    { icon: Award,   value: "18",    label: "h-index" },       
-    { icon: Globe,   value: "31",    label: "i10-index" },
+    { icon: Users,   value: ">1,500", label: "Citations" },      
+    { icon: Award,   value: "20",    label: "h-index" },       
+    { icon: Globe,   value: "40",    label: "i10-index" },
   ];
 
   // Research areas aligned with your profile
@@ -72,7 +73,7 @@ const Index = () => {
       title: "Using species ranges and macroeconomic data to fill the gap in costs of biological invasions",
       journal: "Nature Ecology & Evolution",
       year: "2025",
-      citations: 15,               // as of Aug 2025
+      citations: 27,               // as of Jul 2026
       impact: "Interpolation",
       url: "https://www.nature.com/articles/s41559-025-02697-5",
     },
@@ -80,7 +81,7 @@ const Index = () => {
       title: "Taming the terminological tempest in invasion science",
       journal: "Biological Reviews",
       year: "2024",
-      citations: 165,               
+      citations: 238,               // as of Jul 2026
       impact: "Conceptual",
       url: "https://onlinelibrary.wiley.com/doi/10.1111/brv.13071",
     },
@@ -88,7 +89,7 @@ const Index = () => {
       title: "Divergent temporal responses of native macroinvertebrate communities to biological invasions",
       journal: "Global Change Biology",
       year: "2024",
-      citations: 15,               
+      citations: 15,               // as of Jul 2026
       impact: "Meta-analysis",
       url: "https://doi.org/10.1111/gcb.17521",
     },
